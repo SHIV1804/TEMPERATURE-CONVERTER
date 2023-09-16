@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <link rel="stylesheet" href="./after-login-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 me-auto text-white text-decoration-none">
+                    <img src="./pngegg.png" alt="Temperature logo" id="tempLogo" width="50px" height="50px">
+                </a>
+                <div class="text-end">
+                    <button id="logout" type="button" class="btn btn-outline-light me-2">Log out</button>
+                    <!-- <a href=""><button type="button" class="btn btn-warning">Sign-up</button></a> -->
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary" id="main-box">
+            <div class="col-md-6 p-lg-5 mx-auto my-5" id="sub-box">
+                <h1 class="display-3 fw-bold">Convert Temperature</h1>
+                <div class="d-flex gap-3 mt-5 justify-content-center lead fw-normal">
+                    <div class="input-group border border-dark">
+                        <span class="input-group-text">Celcius</span>
+                        <input type="number" id="Celcius" aria-label="First name" class="form-control temp"
+                            placeholder="Enter Temperature">
+
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3 mt-5 justify-content-center lead fw-normal">
+                    <div class="input-group border border-dark">
+                        <span class="input-group-text">Fahrenheit</span>
+                        <input type="number" id="Fahrenheit" aria-label="First name" class="form-control temp"
+                            placeholder="Enter Fahrenheit">
+                    </div>
+                </div>
+                <div class="d-flex gap-3 mt-5 justify-content-center lead fw-normal">
+                    <div class="input-group border border-dark">
+                        <span class="input-group-text">Kelvin</span>
+                        <input type="number" id="Kelvin" aria-label="First name" class="form-control temp"
+                            placeholder="Enter Kelvin">
+
+                    </div>
+                </div>
+                <div class="temp-box"></div>
+            </div>
+
+        </div>
+
+        <div class="p-5 text-center bg-body-tertiary">
+            <a href="https://www.timeanddate.com/weather/india/jabalpur/ext"> <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100" xml:space="preserve" width="50%">
+                    <path fill="#F29D00" d="m58.482 31.412 3.537-6.509 3.538 6.509z" />
+                    <path fill="#F29D00" d="m64.649 31.076 5.761-4.364.677 7.482z" />
+                    <path fill="#F29D00" d="m69.963 33.518 7.068-.36-3.24 6.68z" />
+                    <path fill="#F29D00" d="m73.271 38.434 6.576 2.776-5.552 4.66z" />
+                    <path fill="#F29D00"
+                        d="m74.57 44.201 4.63 5.683-6.949 1.418zM50.915 47.469l-6.147-3.723 6.11-3.791z" />
+                    <path fill="#F29D00"
+                        d="m54.198 52.643-7.076.02 3.522-6.518zM50.667 40.435l-3.168-6.72 7.064.446z" />
+                    <path fill="#F29D00"
+                        d="m53.338 34.769-.155-7.513 6.203 3.614zM64.228 55.462l-3.577 5.86-2.99-6.22z" />
+                    <path fill="#F29D00"
+                        d="m58.717 54.975-5.544 3.757-.291-6.977zM69.29 53.504l-.796 6.932-5.254-4.199z" />
+                    <path fill="#F29D00" d="m72.809 49.879 1.828 6.708-6.384-1.673z" />
+                    <path fill="#F1C600"
+                        d="M74.509 43.258c0 7.083-5.407 12.825-12.075 12.825-6.669 0-12.075-5.742-12.075-12.825 0-4.879 2.566-9.122 6.343-11.29a11.467 11.467 0 0 1 5.732-1.535c6.669 0 12.075 5.742 12.075 12.825z" />
+                    <path fill="#217EBA"
+                        d="M53.162 44.172a8.646 8.646 0 0 0-4.045.999c-1.653-3.708-5.649-6.326-10.318-6.326-5.87 0-10.675 4.134-11.099 9.375a10.137 10.137 0 0 0-2.7-.366c-5.557 0-10.062 4.464-10.062 9.97s4.505 9.97 10.062 9.97c2.415 0 4.631-.844 6.365-2.249 1.318 4.509 5.602 7.815 10.688 7.815 6.136 0 11.109-4.808 11.109-10.74 0-.383-.022-.762-.062-1.135l.062.002c4.791 0 8.675-3.876 8.675-8.657s-3.884-8.658-8.675-8.658z" />
+                    <path fill="#217EBA"
+                        d="M78.54 52.895a6.612 6.612 0 0 0-3.119.696c-1.211-2.875-4.236-4.953-7.819-5.034-4.504-.104-8.254 2.984-8.662 6.998a7.807 7.807 0 0 0-2.066-.328c-4.263-.097-7.79 3.248-7.875 7.473-.086 4.225 3.302 7.728 7.565 7.825a7.727 7.727 0 0 0 4.919-1.613c.941 3.482 4.177 6.094 8.079 6.183 4.708.108 8.599-3.495 8.691-8.046a8.142 8.142 0 0 0-.03-.872l.048.002c3.676.084 6.716-2.821 6.79-6.49.074-3.667-2.846-6.71-6.521-6.794z" />
+                    <g fill="#3B96D2">
+                        <path
+                            d="M50.901 65.109c.086-4.224 3.611-7.57 7.876-7.473a7.82 7.82 0 0 1 2.066.328c.406-4.014 4.157-7.101 8.661-6.998 3.583.082 6.608 2.159 7.818 5.034a6.63 6.63 0 0 1 3.12-.695 6.655 6.655 0 0 1 4.444 1.831 6.68 6.68 0 0 0-6.194-4.599 6.633 6.633 0 0 0-3.119.696c-1.211-2.875-4.236-4.953-7.819-5.034-4.504-.104-8.255 2.984-8.662 6.998a7.772 7.772 0 0 0-2.065-.328c-4.264-.098-7.79 3.248-7.875 7.472a7.609 7.609 0 0 0 2.205 5.513 7.557 7.557 0 0 1-.456-2.745zM63.386 71.322a7.727 7.727 0 0 1-.251.185c.156.196.322.385.496.567a7.856 7.856 0 0 1-.245-.752z" />
+                    </g>
+                    <path fill="#3B96D2"
+                        d="M15.713 61.01c0-5.506 4.505-9.97 10.062-9.97.936 0 1.84.13 2.7.366.423-5.24 5.229-9.374 11.098-9.374 4.671 0 8.666 2.617 10.319 6.326a8.643 8.643 0 0 1 4.045-.999 8.675 8.675 0 0 1 7.895 5.07c-.21-4.594-4.008-8.256-8.665-8.256a8.646 8.646 0 0 0-4.045.999c-1.653-3.708-5.649-6.326-10.319-6.326-5.869 0-10.674 4.134-11.099 9.375a10.135 10.135 0 0 0-2.699-.366c-5.557 0-10.062 4.464-10.062 9.97 0 1.383.284 2.699.798 3.897a9.92 9.92 0 0 1-.028-.712z" />
+                </svg>
+            </a>
+            <h1 class="text-body-emphasis">Jumbotron with icon</h1>
+            <p class="col-lg-8 mx-auto fs-5 text-muted fw-bold">
+                Wherever you go, no matter what the weather, always bring your own sunshine. Sunshine is delicious, rain
+                is refreshing, wind braces us up, snow is exhilarating; there is really no such thing as bad weather,
+                only different kinds of good weather.</p>
+            <div class="d-inline-flex gap-2 mb-5">
+                <a href="https://www.timeanddate.com/weather/india/jabalpur/ext"><button
+                        class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                        start weather forecast
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 -1 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </button></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <footer class="py-3 my-4 ">
+            <p class="text-center text-body-primary">© 2023 Company, Inc</p>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./after-login-js.js" charset="UTF-8"></script>
+</body>
+
+</html>

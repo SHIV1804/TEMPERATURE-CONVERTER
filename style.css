@@ -1,0 +1,31 @@
+#main-box{
+    height: 100vh;
+}
+
+.temp-box{
+    margin-bottom: 10% ;
+    margin-top: 10% ;
+
+    height: 10vh;
+    background-color: rgba(120, 126, 126, 0.707);
+
+}
+button{
+    border: none;
+    background-color: rgba(240, 238, 238, 0.501);
+    font-weight: 500;
+}
+
+.temp-box{
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    height: max-content;
+    
+}
+
+input:hover{
+    box-shadow: 0px 0px 50px black;
+    
+    color:white;
+}

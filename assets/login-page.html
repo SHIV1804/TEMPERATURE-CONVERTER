@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Slide Navbar</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form action="../index.html" name="login-page" onsubmit="return validation()">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="User name" required="" id="User" autocomplete="username">
+                <input type="email" name="email" placeholder="Email" required="" id="Email" autocomplete="email">
+                <input type="password" name="pswd" placeholder="Password" required="" id="Password"
+                    autocomplete="new-password">
+                <button id="Sign" type="submit">Sign up</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required="" autocomplete="email">
+                <input type="password" name="pswd" placeholder="Password" required="" autocomplete="current-password">
+                <button id="button-2" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./login-page.js"></script>
+</body>
+
+</html>
